@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //use the rest countries API to display all the countries names , regions , sub regions ,population in the console
+        var request=new XMLHttpRequest();
+        request.open('GET','https://restcountries.com/v3.1/all',true)
+        request.send();
+        request.onload=function(){
+            var data=JSON.parse(request.response)
+            // for Of loop
+            for(var obj of data){
+                console.log("name : "+obj.name.official , "\nregion : "+ obj.region , "\nsubregion : "+obj.subregion ,"\npopulation : "+obj.population )
+            }
+        }
+    </script>
+</body>
+</html>

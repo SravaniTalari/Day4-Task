@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Compare two json having same properties without order
+        //var obj1={name:"Person1", age:5}
+        //var obj2={age:5,name:"Person1"}
+      
+        var obj1={name:"Person1", age:5}
+        var obj2={age:5,name:"Person1"}
+        if(obj1.name===obj2.name && obj1.age===obj2.age)
+        {
+            console.log("Two objects are equal")
+        }
+        else{
+            console.log("Two objects are not equal")
+        }
+      
+
+    </script>
+</body>
+</html>
